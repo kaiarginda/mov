@@ -90,8 +90,8 @@
 // export default CommentInput;
 // CommentInput.jsx
 import React, { useState } from "react";
-import "./CommentInput.css";
-
+// import "./CommentInput.css";
+import "./commentInput.css";
 const CommentInput = ({ postID, author }) => {
   const [comment, setComment] = useState("");
 
