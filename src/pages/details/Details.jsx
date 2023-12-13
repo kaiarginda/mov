@@ -81,7 +81,7 @@ const Details = () => {
       <DetailsBanner video={data?.results?.[0]} crew={credits?.crew} />
       <Cast data={credits?.cast} loading={creditsLoading} />
 
-      {/* {id && loggedUser ? (
+      {id && loggedUser ? (
         <div>
           <CommentInput postID={id} author={loggedUser} />
           {commentData && id ? (
@@ -94,10 +94,10 @@ const Details = () => {
         <CommentList productId={id} showReply={false} />
       ) : (
         <p>Loading comments...</p>
-      )} */}
-
+      )}
+      {/* 
       {loggedUser ? <CommentInput postID={id} author={loggedUser} /> : null}
-      {id ? <CommentList productId={id} /> : null}
+      {id ? <CommentList productId={id} /> : null} */}
 
       <VideosSection data={data} loading={loading} />
       <Similar mediaType={mediaType} id={id} />
