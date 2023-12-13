@@ -93,7 +93,7 @@ const Header = ({ loggedUser }) => {
               loggedUser.username
             ) : (
               <Link
-                to="https://mov-dv4y.onrender.com/login"
+                to="/login"
                 className="td-none"
               >
                 Login
@@ -105,7 +105,7 @@ const Header = ({ loggedUser }) => {
               loggedUser.username
             ) : (
               <Link
-                to="https://mov-dv4y.onrender.com/register"
+                to="/register"
                 className="td-none"
               >
                 Register

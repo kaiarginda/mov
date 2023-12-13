@@ -130,7 +130,7 @@
 // export default RegistrationForm;
 
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
     username: "",
@@ -262,6 +262,7 @@ const RegistrationForm = () => {
           Register
         </button>
       </form>
+      <Link to="/">Go Back To HomePage</Link>
     </div>
   );
 };

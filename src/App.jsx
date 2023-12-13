@@ -13,6 +13,8 @@ import SearchResult from "./pages/searchResult/SearchResult";
 import Explore from "./pages/explore/Explore";
 import PageNotFound from "./pages/404/PageNotFound";
 import LoginForm from "./components/Login";
+
+import { HashRouter } from "react-router-dom";
 function App() {
   const dispatch = useDispatch();
   const { url } = useSelector((state) => state.home);
@@ -73,7 +75,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Header loggedUser={loggedUser} />
       <Routes>
         <Route path="/" element={[<Home />]} />
@@ -85,7 +87,7 @@ function App() {
         <Route path="*" element={[<PageNotFound />]} />
       </Routes>
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

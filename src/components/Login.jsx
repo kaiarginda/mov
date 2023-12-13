@@ -112,6 +112,7 @@
 // export default LoginForm;
 
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({
@@ -227,6 +228,8 @@ const LoginForm = () => {
           Login
         </button>
       </form>
+
+      <Link to="/">Go Back To HomePage</Link>
     </div>
   );
 };
