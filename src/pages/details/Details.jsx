@@ -89,20 +89,9 @@ const Details = () => {
       ) : (
         <p>Loading comments...</p>
       )} */}
-      {id && loggedUser ? (
-        <div>
-          <CommentInput postID={id} author={loggedUser} />
-          {commentData && id ? (
-            <CommentList productId={id} />
-          ) : (
-            <p>Loading comments...</p>
-          )}
-        </div>
-      ) : id ? (
-        <CommentList productId={id} showReply={false} />
-      ) : (
-        <p>Loading comments...</p>
-      )}
+
+      {loggedUser ? <CommentInput postID={id} author={loggedUser} /> : null}
+      {id ? <CommentList productId={id} /> : null}
 
       <VideosSection data={data} loading={loading} />
       <Similar mediaType={mediaType} id={id} />
