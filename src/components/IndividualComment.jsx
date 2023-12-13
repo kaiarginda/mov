@@ -337,7 +337,7 @@ const IndividualComment = ({
   const submitReply = async (com) => {
     if (loggedUser) {
       try {
-        const response = await fetch("http://localhost:5000/api/reply", {
+        const response = await fetch("https://movipia.onrender.com/api/reply", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

@@ -23,13 +23,16 @@ function App() {
   useEffect(() => {
     const fetchLoggedUser = async () => {
       if (!token) return;
-      const res = await fetch("http://localhost:5000/api/getloggeduser", {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify({ token }),
-      });
+      const res = await fetch(
+        "https://movipia.onrender.com/api/getloggeduser",
+        {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+          },
+          body: JSON.stringify({ token }),
+        }
+      );
 
       if (res.ok) {
         const dat = await res.json();

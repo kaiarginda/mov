@@ -153,7 +153,7 @@ const RegistrationForm = () => {
     setFail(false);
     setSuccess(false);
 
-    const res = await fetch("http://localhost:5000/api/createuser", {
+    const res = await fetch("https://movipia.onrender.com/api/createuser", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

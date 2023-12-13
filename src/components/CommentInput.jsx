@@ -97,7 +97,7 @@ const CommentInput = ({ postID, author }) => {
 
   const formSubmitHandler = async (e) => {
     e.preventDefault();
-    await fetch("http://localhost:5000/api/comment", {
+    await fetch("https://movipia.onrender.com/api/comment", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

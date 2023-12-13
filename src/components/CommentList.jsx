@@ -164,7 +164,9 @@ const CommentList = ({ productId, showReply }) => {
 
   useEffect(() => {
     const fetchComments = async () => {
-      const res = await fetch("http://localhost:5000/api/getrootcomments");
+      const res = await fetch(
+        "https://movipia.onrender.com/api/getrootcomments"
+      );
       if (res.ok) {
         const data = await res.json();
         setComments(data.comments || []); // Set to an empty array if null
@@ -172,7 +174,9 @@ const CommentList = ({ productId, showReply }) => {
     };
 
     const fetchRootComments = async () => {
-      const res = await fetch("http://localhost:5000/api/getallcomments");
+      const res = await fetch(
+        "https://movipia.onrender.com/api/getallcomments"
+      );
       if (res.ok) {
         const data = await res.json();
         setAllComments(data.allComments || []); // Set to an empty array if null
@@ -188,13 +192,16 @@ const CommentList = ({ productId, showReply }) => {
 
     const fetchLoggedUser = async () => {
       if (!token) return;
-      const res = await fetch("http://localhost:5000/api/getloggeduser", {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify({ token }),
-      });
+      const res = await fetch(
+        "https://movipia.onrender.com/api/getloggeduser",
+        {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+          },
+          body: JSON.stringify({ token }),
+        }
+      );
 
       if (res.ok) {
         const dat = await res.json();
