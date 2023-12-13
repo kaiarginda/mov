@@ -3,7 +3,7 @@ import { HiOutlineSearch } from "react-icons/hi";
 import { SlMenu } from "react-icons/sl";
 import { VscChromeClose } from "react-icons/vsc";
 import { useNavigate, useLocation } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 import "./style.scss";
 
 import ContentWrapper from "../contentWrapper/ContentWrapper";
@@ -92,18 +92,24 @@ const Header = ({ loggedUser }) => {
             {loggedUser ? (
               loggedUser.username
             ) : (
-              <a href="/login" className="td-none">
+              <Link
+                to="https://mov-dv4y.onrender.com/login"
+                className="td-none"
+              >
                 Login
-              </a>
+              </Link>
             )}{" "}
           </li>
           <li className="menuItem">
             {loggedUser ? (
               loggedUser.username
             ) : (
-              <a href="/register" className="td-none">
+              <Link
+                to="https://mov-dv4y.onrender.com/register"
+                className="td-none"
+              >
                 Register
-              </a>
+              </Link>
             )}{" "}
           </li>
           <li className="menuItem">
