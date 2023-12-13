@@ -85,7 +85,7 @@ const Details = () => {
         <div>
           <CommentInput postID={id} author={loggedUser} />
           {commentData && id ? (
-            <CommentList productId={id} />
+            <CommentList productId={id} showReply={true} />
           ) : (
             <p>Loading comments...</p>
           )}
