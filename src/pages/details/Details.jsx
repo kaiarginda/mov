@@ -27,13 +27,16 @@ const Details = () => {
       if (!token) return;
 
       try {
-        const res = await fetch("http://localhost:5000/api/getloggeduser", {
-          method: "POST",
-          headers: {
-            "Content-type": "application/json",
-          },
-          body: JSON.stringify({ token }),
-        });
+        const res = await fetch(
+          "https://movipia.onrender.com/api/getloggeduser",
+          {
+            method: "POST",
+            headers: {
+              "Content-type": "application/json",
+            },
+            body: JSON.stringify({ token }),
+          }
+        );
 
         if (res.ok) {
           const data = await res.json();
@@ -48,11 +51,14 @@ const Details = () => {
 
     const fetchCommentData = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/getComments`, {
-          method: "POST",
-          headers: { "Content-type": "application/json" },
-          body: JSON.stringify({ id }),
-        });
+        const res = await fetch(
+          `https://movipia.onrender.com/api/getComments`,
+          {
+            method: "POST",
+            headers: { "Content-type": "application/json" },
+            body: JSON.stringify({ id }),
+          }
+        );
         if (res.ok) {
           const data = await res.json();
           console.log(data, "datatata");
